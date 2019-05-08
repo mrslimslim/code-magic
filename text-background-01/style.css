@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.container p{
+    font-size: 6em;
+    color: rgba(255, 255, 255, 0.3);
+    background-image: url(./water.png);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    /* 注意添加私有前缀 */
+    -webkit-background-clip: text;
+    font-weight: 500;
+    animation: wave 30s linear infinite;
+}
+@keyframes wave{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 1000px 0;
+    }
+}
