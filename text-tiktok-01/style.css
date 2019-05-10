@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    background: #000;
+}
+.container{
+    align-self: center;
+    justify-self: center;
+    color: #fff;
+    font-size: 6em;
+    letter-spacing: 8px;
+    font-family: fira code;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+.container::before ,.container::after{
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container::before{
+    color: #ff00c1;
+    animation: tik-tok 0.5s infinite;
+    animation-delay: 0.1s;
+}
+.container::after{
+    color: #3498db;
+    animation: tik-tok 0.5s infinite;
+}
+@keyframes tik-tok {
+    0%{
+        left: -8px;
+        top: -8px;
+    }
+    25%{
+        left: 8px;
+        top: 0px;
+    }
+    50%{
+        left: -4px;
+        top: 8px;
+    }
+    75%{
+        left: 4px;
+        top: -4px;
+    }
+    100%{
+        left: 0;
+        top: -4px;
+    }
+}
